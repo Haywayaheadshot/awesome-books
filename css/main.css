@@ -54,8 +54,6 @@ a:visited {
 .nav-li {
   margin-right: 20px;
   width: fit-content;
-
-  /* padding-right: 20px; */
 }
 
 .nav-li:nth-child(1),
@@ -82,7 +80,6 @@ a:visited {
   height: 20px;
   font-size: 0.8rem;
   font-weight: 600;
-  cursor: pointer;
 }
 
 .nav-li-items:hover {
@@ -208,8 +205,6 @@ a:visited {
 .contact-me-paragraph {
   text-align: center;
   font-size: 20px;
-
-  /* font-size: 12px; */
 }
 
 .contact-me-ul {
@@ -226,7 +221,6 @@ a:visited {
 
 #show-saved-books {
   padding: 20px 30px;
-  display: flex;
   flex-direction: column;
   margin-top: 100px;
   height: 50%;
@@ -251,7 +245,6 @@ a:visited {
 
 .shelved-book-header {
   text-align: center;
-
 }
 
 .delete-button-div {
@@ -336,6 +329,7 @@ a:visited {
   text-align: center;
   font-size: 3rem;
   cursor: default;
+
   /* display: none; */
 }
 
