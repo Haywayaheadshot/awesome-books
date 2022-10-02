@@ -48,7 +48,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowlegement
 - Thanks to my coding partners
-- Thanks to [flaticons]() for the icons used
+- Thanks to [flaticons](https://www.flaticon.com/) for the icons used
 - Thanks to Microverse for their curriculum
 - Thanks to morning session team
 - Thanks to stand up team
