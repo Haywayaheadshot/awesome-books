@@ -34,6 +34,24 @@ addNewBook.addEventListener('click', (event) => {
   welcomeMessage.style.display = 'none';
 });
 
+document.addEventListener('keypress', (event) => {
+  if (event.keyCode === 13 || event.which === 13) {
+    event.preventDefault();
+    if (title.value === '' || author.value === '') {
+      showErrorMessage.style.display = 'flex';
+    } else {
+      showErrorMessage.style.display = 'none';
+      createNewBook.addNewBook(event);
+      // show success card and hide it after 3 seconds
+      successCard.style.display = 'block';
+      setTimeout(() => {
+        successCard.style.display = 'none';
+      }, 1500);
+    }
+    welcomeMessage.style.display = 'none';
+  }
+});
+
 // Event listener for the delete button
 savedBookContainer.addEventListener('click', (event) => {
   if (event.target.className === 'trash-can') {
