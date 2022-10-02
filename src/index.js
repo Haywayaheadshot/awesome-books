@@ -2,7 +2,7 @@
 import {
   displayForm, contactMe, savedBookContainer, list,
   addNew, contact, addNewBook, title, author,
-  showErrorMessage, successCard, welcomeMessage,
+  showErrorMessage, successCard, welcomeMessage, noBooks,
 } from './modules/Variables.js';
 
 // import bookKeeper from './modules/Constructor.js';
@@ -39,11 +39,18 @@ savedBookContainer.addEventListener('click', (event) => {
   if (event.target.className === 'trash-can') {
     const index = event.target.id;
     createNewBook.deleteBook(index);
+    // if there are no books in the array, display no books message
+    if (createNewBook.bookKeeperArray.length === 0) {
+      savedBookContainer.innerHTML = noBooks;
+    }
   }
 });
 
 // Add event listener to list saved books
 list.addEventListener('click', () => {
+  contactMe.style.display = 'none';
+  displayForm.style.display = 'none';
+  welcomeMessage.style.display = 'none';
   // if list is empty, show message
   if (createNewBook.bookKeeperArray.length > 0) {
     createNewBook.showSavedBooks();
@@ -51,17 +58,12 @@ list.addEventListener('click', () => {
     displayForm.style.display = 'none';
     welcomeMessage.style.display = 'none';
   } else {
-    savedBookContainer.innerHTML = `
-      <img class="sad-face-emoji" src="images/icons/sad-face-emoji.png" alt="Sad face emoji" role="presentation">
-      <h3 class="empty-list-message font">You have no books on your shelf. Go to "ADD NEW" to add new book.</h3>
-      `;
+    savedBookContainer.innerHTML = noBooks;
     contactMe.style.display = 'none';
     displayForm.style.display = 'none';
     welcomeMessage.style.display = 'none';
   }
   savedBookContainer.style.display = 'flex';
-  contactMe.style.display = 'none';
-  displayForm.style.display = 'none';
 });
 
 // Add event listener to add new book
