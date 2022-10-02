@@ -22,7 +22,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Live Demo
 
-To see like demo, click [here](https://haywayaheadshot.github.io/awesome-books/)
+To see live demo, click [here](https://haywayaheadshot.github.io/awesome-books/)
 
 ### Setup
 - To clone the repository run this command - " git clone https://github.com/Haywayaheadshot/awesome-books.git "
