@@ -48,6 +48,7 @@ savedBookContainer.addEventListener('click', (event) => {
 
 // Add event listener to list saved books
 list.addEventListener('click', () => {
+  savedBookContainer.style.display = 'flex';
   contactMe.style.display = 'none';
   displayForm.style.display = 'none';
   welcomeMessage.style.display = 'none';
@@ -63,7 +64,6 @@ list.addEventListener('click', () => {
     displayForm.style.display = 'none';
     welcomeMessage.style.display = 'none';
   }
-  savedBookContainer.style.display = 'flex';
 });
 
 // Add event listener to add new book
