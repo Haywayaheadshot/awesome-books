@@ -21,3 +21,9 @@ export const welcomeMessage = document.querySelector('.welcome-message');
 // createa a new instance of the BookKeeper class
 export const showErrorMessage = document.querySelector('.error-message-div');
 export const successCard = document.querySelector('.successfully-added-card');
+
+// store no books message in a variable
+export const noBooks = `
+<img class="sad-face-emoji" src="images/icons/sad-face-emoji.png" alt="Sad face emoji" role="presentation">
+<h3 class="empty-list-message font">You have no books on your shelf. Go to "ADD NEW" to add new book.</h3>
+`;
