@@ -13,7 +13,7 @@ export default class BookKeeper {
   }
 
   // This is a method to show the saved books.
-  showSavedBooks() {
+  showSavedBooks = () => {
     savedBookContainer.innerHTML = `
           <h1 class="shelved-book-header font">Books Currently On Shelf</h1>
           <i class="quote font">"A book is a gift you can open again and again."</i>
@@ -32,7 +32,7 @@ export default class BookKeeper {
   }
 
   // This is a method to add a new book to the saved books.
-  addNewBook() {
+  addNewBook = () => {
     // Make a new book by using the constructor and input values
     const newBookInput = new BookKeeper(title.value, author.value);
     // Push the new book to the array
@@ -47,7 +47,7 @@ export default class BookKeeper {
   }
 
   // This is a method to delete a book from the saved books.
-  deleteBook(index) {
+  deleteBook = (index) => {
     // Remove the book from the array
     this.bookKeeperArray.splice(index, 1);
     // Save the array to local storage
