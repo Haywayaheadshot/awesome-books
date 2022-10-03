@@ -34,6 +34,7 @@ addNewBook.addEventListener('click', (event) => {
   welcomeMessage.style.display = 'none';
 });
 
+// Event listener to show the saved books when enter is pressed
 document.addEventListener('keypress', (event) => {
   if (event.keyCode === 13 || event.which === 13) {
     event.preventDefault();
